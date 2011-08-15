@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WeatherFlickr</title>
+        <script type="text/javascript" src="lib/touch/sencha-touch.js"></script>
+        <link href="lib/touch/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/Util.js"></script>
+		<script type="text/javascript" src="app/controllers/weatherflickr.js"></script>
+		<script type="text/javascript" src="app/views/Viewport.js"></script>
+		<script type="text/javascript" src="app/views/Templates.js"></script>
+		<script type="text/javascript" src="app/views/Forecast.js"></script>
+		<script type="text/javascript" src="app/views/Loading.js"></script>
+        <script type="text/javascript" src="phonegap-1.0.0.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("deviceready", weatherflickr.mainLaunch, false);
+        </script>
+
+		<style>
+			body {
+				background-color: black;
+			}
+		
+			p.temp {
+				font-size: 9em;
+				color: #FFFFFF;
+				font-weight: bold;
+				text-align: right;
+				-webkit-text-stroke-width: 3px;
+				-webkit-text-stroke-color: black;
+				padding: 0;
+				margin: 0;
+			}
+			p.description {
+				font-size: 2em;
+				color: #FFFFFF;
+				font-weight: bold;
+				text-align: left;
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: black;
+			}
+			
+			p.loading {
+				font-size: 1.5em;
+				color: #FFFFFF;
+				font-weight: bold;
+				text-align: center;
+				padding-top: 300px;
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: black;
+			}
+		</style>
+
+    </head><body></body>
+</html>
