@@ -9,7 +9,19 @@ weatherflickr.views.Forecast = Ext.extend(Ext.Panel, {
 	
     dockedItems: [{
         xtype: 'toolbar',
-        title: ''        
+        title: '',
+		defaults: {iconMask: true, ui: 'plain'},
+    	items: [{xtype: 'spacer'},
+				{
+				iconCls: 'refresh',
+				align: 'right',
+				handler: function () {
+					Ext.dispatch({
+			            controller: weatherflickr.controllers.wfController,
+			            action: 'index',
+			        });
+				}
+			}]
     }],
 
     items: [
@@ -32,7 +44,8 @@ weatherflickr.views.Forecast = Ext.extend(Ext.Panel, {
 				'<p class="description">'+this.forecastData.item.condition.text+'</p>' +
 				'</div>',
 				layout: 'fit',
-				flex: 4
+				flex: 4,
+				style: 'min-height: 50%'
 			}
 			
 			);
